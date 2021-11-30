@@ -1,7 +1,7 @@
 import os
 import json
 
-BPpath = input("enter the Path of the BP : ")+ "\item"
+BPpath = input("enter the Path of the BP : ")+ "\\item"
 
 fileName = str(input("enter the file name (myItem.json) : "))
 itemIdentifer = str(input("enter the Identifer of the item (wiki:myItem) : "))

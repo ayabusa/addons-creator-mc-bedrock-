@@ -25,16 +25,18 @@ itemJson = {
  			}
 
 
-item_json_object = json.dumps(itemjson, indent = 4)
+item_json_object = json.dumps(itemJson, indent = 4)
 
 with open(itemPath, "w") as outfile:
     outfile.write(item_json_object)
 
-with open(itemPath, "w+") as outfile:
-    itemTextureJson = outfile.read()
-    item_texture_json_object = json.loads(texturePath)
-    newItemTexture = {iconIdentifer: {
-            			"textures": "textures/items/"+itemName
-        			}}
-    item_texture_json_object['texture_data'].update(newItemTexture)
-    outfile.write(item_texture_json_object)
+file = open(texturePath, "r+")
+#itemTextureJson = file.read()
+item_texture_json_object = json.load(file)
+newItemTexture = {iconIdentifer: {
+          			"textures": "textures/items/"+itemName
+       			}}
+item_texture_json_object["texture_data"].update(newItemTexture)
+item_json_object = json.dumps(item_texture_json_object, indent = 4)
+file.write(item_texture_json_object)
+#print(item_texture_json_object)
