@@ -1,8 +1,12 @@
 import os
 import json
 
+<<<<<<< HEAD
 false = False
 true = True
+=======
+BPpath = input("enter the Path of the BP : ")+ "\\item"
+>>>>>>> 6b169ada0d3ea4b80a191ccea9114573dcc3f7fc
 
 def item():
 	BPpath = input("enter the Path of the BP : ")+ "\item"
