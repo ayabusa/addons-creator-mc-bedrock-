@@ -25,7 +25,7 @@ itemJson = {
  			}
 
 
-item_json_object = json.dumps(itemjson, indent = 4)
+item_json_object = json.dumps(itemJson, indent = 4)
 
 with open(itemPath, "w") as outfile:
     outfile.write(item_json_object)
