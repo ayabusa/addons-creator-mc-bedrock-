@@ -1,10 +1,11 @@
 import os
 import json
 
-
+# utilisé pour le json sinon il y a des erreurs
 false = False
 true = True
 
+# fonction pour creer un item
 def item():
 	BPpath = input("enter the Path of the BP : ")+ "\item"
 	fileName = str(input("enter the file name (myItem.json) : "))
@@ -31,7 +32,7 @@ def item():
 	# Writing to sample.json
 	with open(filePath, "w") as outfile:
 	    outfile.write(json_object)
-
+# fonction pour creer un block
 def block():
 
 	BPpath = input("enter the Path of the BP : ")+ "\\blocks"
@@ -79,6 +80,7 @@ def block():
 	with open(filePath, "w") as outfile:
 	    outfile.write(json_object)
 
+# permet de choisir un mode
 Mode = int(input("what mode do you want ?\n [1] Item \n [2] Block \n [3] Exit \nMode : "))
 if(Mode == 1):
 	item()
