@@ -32,9 +32,10 @@ def item():
   with open(itemPath, "w") as outfile:
       outfile.write(item_json_object)
 
-  file = open(texturePath, "r+")
-  #itemTextureJson = file.read()
-  item_texture_json_object = json.load(file)
+  with open(texturePath) as file:
+    #itemTextureJson = file.read()
+    print(texturePath)
+    item_texture_json_object = json.load(file)
   newItemTexture = {iconIdentifer: {
             			"textures": "textures/items/"+itemName
          			}}
